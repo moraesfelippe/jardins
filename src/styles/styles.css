@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(header.css);
+@import url(home.css);
+@import url(menu.css);
+@import url(testimonials.css);
+@import url(footer.css);
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff9ea;
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#00b62d;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.btn-default:hover {
+    background-color:#00ff40 ;
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: #fff;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: 1d1d1d;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #00b62d;
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+}
+
+/* Estilos do Modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fica sobreposto à página */
+    z-index: 1000; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo semi-transparente */
+    opacity: 10;
+    transition: opacity 0.30s ease;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    transition: transform 0.3s ease;
+    transform: translateY(-20px);
+    
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilos gerais do formulário */
+#modalFormulario {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Botão fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Títulos */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos dos campos do formulário */
+#contatoForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilo do Campo de Telefone */
+#contatoForm input[type="tel"] {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#contatoForm input[type="tel"]:focus {
+    border-color: #888;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+
+#contatoForm input[type="text"],
+#contatoForm input[type="email"],
+#contatoForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Alteração do estilo ao focar nos campos */
+#contatoForm input[type="text"]:focus,
+#contatoForm input[type="email"]:focus,
+#contatoForm textarea:focus {
+    border-color: #888;
+    outline: none;
+}
+
+/* Estilos do botão de envio */
+#contatoForm button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Alteração da cor do botão ao passar o mouse */
+#contatoForm button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para o campo de texto */
+#contatoForm textarea {
+    resize: none;
+    height: 100px;
+}
+

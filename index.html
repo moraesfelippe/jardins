@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/styles.css">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Jardins</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-brands fa-pagelines" id="nav-logo"> Jardins</i>
+        
+            <ul id="nav-list">
+                <li class="nav-item active">
+                    <button class="btn-default" onclick="window.location.href='#home'">Início</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn-default" onclick="window.location.href='#Servicos'">Serviços</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn-default" onclick="window.location.href='#testimonials'">Clientes</button>
+                </li>
+            </ul>
+
+            <button class="btn-default" id="abrirFormulario">
+                Peça Aqui
+            </button>
+        
+            <!-- Modal Formulário -->
+<div id="modalFormulario" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Entre em Contato</h2>
+        <form id="contatoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+            <button id="mobile-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item">
+                    <a href="#home" class="nav-button">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#Servicos" class="nav-button">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-button">Clientes</a>
+                </li>
+            </ul>
+
+            <button class="btn-default" id="abrirFormularioMobile">
+                Peça Aqui
+            </button>
+
+        </div>
+    </header>
+
+<main id="conteudo">
+    <section id="home">
+            <div class="shape"></div>
+            <div id="cta">
+                <h1 class="title">
+                    Transforme seu 
+                    <span>jardim</span>
+                </h1>
+                <p class="descricao">
+                    Nosso compromisso é garantir que cada jardim reflita a beleza e a tranquilidade que você deseja, combinando estética, funcionalidade e respeito ao meio ambiente. Na JARDINS, cada detalhe é importante, e trabalhamos para que o resultado final supere suas expectativas.
+                </p>
+
+                <div id="cta-buttons">
+                    <a href="#" class="btn-default">
+                        Nossos serviços
+                    </a>
+                    <a href="tel:+55555555" id="phone-button">
+                        <button class="btn-default">
+                            <i class="fa-solid fa-phone"></i>
+                            
+                        </button>
+                        (21)99500-2250
+                    </a>
+                </div>
+
+                <div class="social-media-buttons">
+                    <a href="">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/moraesfelippe/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/image/inicial.png" alt="">
+
+            </div>
+    </section>
+
+    <section id="Servicos">
+            <h2 class="section-title">Serviços e soluçoes</h2>
+            <h3 class="section-subtitle">Confira nossos serviços e soluções oferecidos</h3>
+        <div id="dishes">
+            <div class="dish">
+                
+
+                <img src="src/image/paisagismo.png" class="dish-image" alt="">
+
+                <h3 class="dish-title">
+                    Paisagismo
+                </h3>
+
+                <span class="dish-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+            </div>
+
+            <div class="dish">
+                
+
+                <img src="src/image/manutencao.png" class="dish-image" alt="">
+
+                <h3 class="dish-title">
+                   Manutenção
+                </h3>
+
+                <span class="dish-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+            </div>
+
+            <div class="dish">
+                
+
+                <img src="src/image/reforma.png" class="dish-image" alt="">
+
+                <h3 class="dish-title">
+                    Recuperação de jardim
+                </h3>
+
+                <span class="dish-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+            </div>
+
+            <div class="dish">
+                
+
+                <img src="src/image/piscina.png" class="dish-image" alt="">
+
+                <h3 class="dish-title">
+                    Limpeza dde piscina
+                </h3>
+
+                <span class="dish-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+            </div>
+        </div>
+        
+            
+    </section>
+
+    <section id="testimonials">
+        <img src="src/image/jardineiro (2).png" id="testimonial-jardineiro" alt="">
+
+        <div id="testimonials-content">
+            <h2>Depoimentos
+            </h2>
+            <div id="feedbacks">
+                <div class="feedback">
+                    <img src="src/image/avatar.png" class="feedback-avatar" alt="">
+                    <div class="feedback-content">
+                        <p>
+                            Condominio resort BLUE OCEAN
+                        </p>
+                        <P>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, praesentium, quisquam enim exercitationem consectetur aliquid, vitae non amet nulla ad optio molestias? Dignissimos hic quas tempora dolor autem, soluta dolore."</P>
+                    </div>
+                </div>
+            </div>
+
+            <div id="feedbacks">
+                <div class="feedback">
+                    <img src="src/image/avatar.png" class="feedback-avatar" alt="">
+                    <div class="feedback-content">
+                        <p>
+                            Condominio resort BLUE OCEAN
+                        </p>
+                        <P>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, praesentium, quisquam enim exercitationem consectetur aliquid, vitae non amet nulla ad optio molestias? Dignissimos hic quas tempora dolor autem, soluta dolore."</P>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </section>
+</main>
+
+    <footer>
+        <div id="footer-items">
+            <span id="copyright">
+                &copy 2024 Felipe Moraes  
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="https://www.instagram.com/moraesfelippe/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>
